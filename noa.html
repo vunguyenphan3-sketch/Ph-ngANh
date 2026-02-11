@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường Lớp 12 - Nguyễn Phương Anh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-blue: #0077b6;
+            --light-blue: #caf0f8;
+            --border-color: #00b4d8;
+            --bg-page: #e0f2fe;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            font-family: 'Mali', cursive; /* Font chữ trẻ trung */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Khung viền báo tường */
+        .bao-tuong {
+            max-width: 850px;
+            width: 100%;
+            background: var(--white);
+            border: 10px double var(--main-blue); /* Viền kép sang trọng */
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 119, 182, 0.3);
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* Trang trí góc */
+        .bao-tuong::before {
+            content: "☁️"; font-size: 50px; position: absolute; top: -20px; left: -20px;
+        }
+        .bao-tuong::after {
+            content: "🌊"; font-size: 50px; position: absolute; bottom: -20px; right: -20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--main-blue), var(--border-color));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid var(--border-color);
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            font-family: 'Charm', cursive;
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        h2 {
+            color: var(--main-blue);
+            border-left: 8px solid var(--main-blue);
+            padding-left: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: var(--light-blue);
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Thời khóa biểu */
+        .table-container {
+            overflow-x: auto;
+            border: 3px solid var(--main-blue);
+            border-radius: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background-color: var(--main-blue);
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            border: 1px solid var(--light-blue);
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        tr:nth-child(even) { background-color: #f0f9ff; }
+
+        /* Box nội dung */
+        .box-info {
+            background: #f8fafc;
+            border: 2px dashed var(--main-blue); /* Viền nét đứt tạo kiểu báo tường */
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .box-info ul {
+            padding-left: 20px;
+        }
+
+        .box-info li {
+            margin-bottom: 10px;
+            list-items: "✨ ";
+        }
+
+        /* Facebook Button */
+        .fb-btn {
+            display: inline-block;
+            background: #1877F2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+        }
+
+        .fb-btn:hover { transform: scale(1.05); }
+
+        /* Góc Thơ */
+        .poem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .poem-item {
+            background: white;
+            border: 1px solid var(--light-blue);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .poem-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid var(--light-blue);
+        }
+
+        .poem-text {
+            font-style: italic;
+            color: #444;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--main-blue);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .poem-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bao-tuong">
+    <header>
+        <h1>Nguyễn Phương Anh 💎</h1>
+        <div class="subtitle">Lớp 12 - Hành trình rực rỡ và hy vọng</div>
+    </header>
+
+    <section>
+        <h2>📅 Thời Khóa Biểu</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tiết</th>
+                        <th>Thứ 2</th>
+                        <th>Thứ 3</th>
+                        <th>Thứ 4</th>
+                        <th>Thứ 5</th>
+                        <th>Thứ 6</th>
+                        <th>Thứ 7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>HĐTN-HN</td><td>Tin học</td><td>Ngữ văn</td><td>Toán</td><td>GD KT&PL</td><td>Địa lý</td></tr>
+                    <tr><td>2</td><td>GD LSĐP</td><td>Tin học</td><td>Ngữ văn</td><td>Toán</td><td>GD KT&PL</td><td>Địa lý</td></tr>
+                    <tr><td>3</td><td>Lịch sử</td><td>Ngoại ngữ</td><td>GD Thể chất</td><td>Ngoại ngữ</td><td>Lịch sử</td><td>Ngữ văn</td></tr>
+                    <tr><td>4</td><td>Hóa học</td><td>Toán HT</td><td>Toán</td><td>Ngoại ngữ</td><td>Văn HT</td><td>GD Thể chất</td></tr>
+                    <tr><td>5</td><td>Hóa học</td><td>Toán HT</td><td>Toán</td><td>Ngữ văn</td><td>Văn HT</td><td>HĐTN-HN</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎯 Sở Thích & Định Hướng</h2>
+        <div class="box-info">
+            <p><strong>🌟 Sở thích của mình:</strong> Nghe nhạc không lời khi học bài, vẽ doodle vào lề vở, và đặc biệt là thích khám phá những kiến thức về tâm lý học.</p>
+            <p><strong>🚀 Định hướng tương lai:</strong> Là học sinh lớp 12, mục tiêu lớn nhất của mình là vượt qua kỳ thi THPTQG với số điểm thật cao. Mình mong muốn theo học khối ngành Kinh tế hoặc Ngoại giao để tự tin bước ra thế giới.</p>
+        </div>
+        
+        <center>
+            <a href="https://facebook.com" class="fb-btn">💬 Kết nối với mình qua Facebook</a>
+        </center>
+    </section>
+
+    <section>
+        <h2>📜 Góc Tâm Hồn Lớp 12</h2>
+        <div class="poem-grid">
+            <div class="poem-item">
+                <img src="https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?auto=format&fit=crop&w=400" alt="Cánh phượng" class="poem-img">
+                <p style="font-weight: bold; color: var(--main-blue);">Lời Chào Cuối Cấp</p>
+                <p class="poem-text">
+                    "Mười hai năm trời miệt mài kinh sử
+                    Bảng đen phấn trắng gói cả tuổi thơ
+                    Cánh phượng rơi hay là niềm nuối tiếc
+                    Chuyến đò này sắp cập bến ước mơ."
+                </p>
+            </div>
+            <div class="poem-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400" alt="Bạn bè" class="poem-img">
+                <p style="font-weight: bold; color: var(--main-blue);">Vững Bước Tương Lai</p>
+                <p class="poem-text">
+                    "Đừng lo lắng trước ngàn trùng sóng gió
+                    Sức trẻ mình đâu ngại những gian nan
+                    Vững tin lên, Phương Anh ơi cố gắng
+                    Nắng mai về, rạng rỡ những huy hoàng."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Thiết kế riêng cho Nguyễn Phương Anh - Lớp 12 © 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
